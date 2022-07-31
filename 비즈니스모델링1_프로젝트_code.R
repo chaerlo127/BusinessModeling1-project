@@ -198,7 +198,7 @@ disease_6month<- data_file %>%
   head(5)
 ggplot(disease_6month, aes(x = reorder(disease_name, -n), y = n)) + geom_col()
 
-# 노년층에서 만성질환을 6개월 이상 투병 중인 병명 ㅈ우 높은 순위 top 5
+# 노년층에서 만성질환을 6개월 이상 투병 중인 병명 중 높은 순위 top 5
 disease_6month_old<- data_file %>% 
   filter(disease == 3 & ageg == "old") %>% 
   group_by(disease_name) %>% 
